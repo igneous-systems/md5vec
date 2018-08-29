@@ -10,7 +10,7 @@ The function which this package exports has the signature:
 which provides an up-to-8-way parallel invocation of md5 rounds 
 on the given byte slices. (by analogy to `hash.Write`)
 
-Note: all slices must be of the same length, and `len(p)` must be the
+Note: all byte slices must be of the same length, and `len(p)` must be the
 same as `len(h)`. Furthermore, `h` must represent a collection of `crypto/md5`
 hash digests, as created by `md5.New()`. Therefore, after calling
 `WriteN()` any trailers may be written directly via `hash.Write()` and
